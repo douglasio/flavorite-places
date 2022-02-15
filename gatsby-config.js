@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Flavorite Places',
@@ -81,7 +85,8 @@ module.exports = {
         spaceId: `2e94reghz8w0`,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
+				// accessToken: `P8LfgzM7FSBE1X43ZvKseeJnWdGvbaHaMKOI26vB4bY`,
+			},
     },
   ],
 }
