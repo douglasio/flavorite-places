@@ -1,10 +1,11 @@
 {
-	"printWidth": 100,
+	"printWidth": 150,
 	"tabWidth": 2,
 	"semi": false,
 	"singleQuote": true,
 	"jsxSingleQuote": true,
 	"trailingComma": "es5",
 	"arrowParens": "always",
-	"htmlWhitespaceSensitivity": "css"
+	"htmlWhitespaceSensitivity": "css",
+	"proseWrap": "preserve"
 }
