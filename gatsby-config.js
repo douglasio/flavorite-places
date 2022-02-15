@@ -52,6 +52,7 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-react-helmet-async`,
+		`gatsby-plugin-root-import`,
 		`gatsby-plugin-image`,
 		{
 			resolve: `gatsby-source-filesystem`,
@@ -65,10 +66,10 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`,
+				name: `flavorite-places`,
+				short_name: `flavorite`,
 				start_url: `/`,
-				background_color: `#663399`,
+				background_color: `#000`,
 				// This will impact how browsers show your PWA/website
 				// https://css-tricks.com/meta-theme-color-and-trickery/
 				// theme_color: `#663399`,

@@ -1,12 +1,16 @@
+//Dependencies
 import * as React from 'react'
 
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+//Components
+import { Header, Layout } from 'components'
 
-const IndexPage = () => (
-	<Layout>
-		<Seo title='Home' />
-	</Layout>
-)
+const IndexPage = () => {
+	return (
+		<Layout>
+			<Header />
+			<p>hello worlt</p>
+		</Layout>
+	)
+}
 
 export default IndexPage
