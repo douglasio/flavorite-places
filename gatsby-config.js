@@ -80,7 +80,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
 		{
-      resolve: `gatsby-source-contentful`,
+      	resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `2e94reghz8w0`,
         // Learn about environment variables: https://gatsby.dev/env-vars
