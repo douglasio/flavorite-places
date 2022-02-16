@@ -12,22 +12,22 @@ module.exports = {
 		},
 		menuLinks: [
 			{
-				name: 'home',
-				link: '/',
+				label: 'home',
+				href: '/',
 			},
 			{
-				name: 'Places',
-				link: '/places',
+				label: 'Places',
+				href: '/places',
 			},
 			{
-				name: 'about',
-				link: '/about',
+				label: 'about',
+				href: '/about',
 			},
 		],
 		socialLinks: [
 			{
-				name: 'Instagram',
-				link: 'https://www.instagram.com/itsnebulose/',
+				label: 'Instagram',
+				href: 'https://www.instagram.com/itsnebulose/',
 			},
 		],
 	},
@@ -74,7 +74,7 @@ module.exports = {
 				// https://css-tricks.com/meta-theme-color-and-trickery/
 				// theme_color: `#663399`,
 				display: `minimal-ui`,
-				icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+				icon: `public/static/favicon.ico`, // This path is relative to the root of the site.
 			},
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality

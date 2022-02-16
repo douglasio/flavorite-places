@@ -1,8 +1,14 @@
 //Dependencies
 import React from 'react'
-import { ThemeProvider } from '@mui/material'
+import PropTypes from 'prop-types'
+import { graphql, useStaticQuery } from 'gatsby'
+import { Grommet, Main } from 'grommet'
+
+//Components
+import { Header } from 'components'
 
 //Styles
+import './layout.css'
 import theme from 'styles/theme'
 
 type LayoutProps = {
@@ -10,7 +16,36 @@ type LayoutProps = {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-	return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+	const {
+		site: { siteMetadata },
+	} = useStaticQuery(graphql`
+		query {
+			site {
+				siteMetadata {
+					title
+					menuLinks {
+						label
+						href
+					}
+					socialLinks {
+						label
+						href
+					}
+				}
+			}
+		}
+	`)
+
+	return (
+		<Grommet theme={theme}>
+			<Header menuItems={siteMetadata.menuLinks.concat(siteMetadata.socialLinks)} siteTitle={siteMetadata.title} />
+			<Main>{children}</Main>
+		</Grommet>
+	)
+}
+
+Layout.propTypes = {
+	children: PropTypes.node.isRequired,
 }
 
 export default Layout

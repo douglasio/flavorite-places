@@ -1,0 +1,76 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import theme from 'styles/theme'
+
+type LogoProps = {
+	foreground: string
+}
+
+const Logo = ({ foreground }: LogoProps) => {
+	return (
+		<svg viewBox='0 0 99 117.647'>
+			<defs>
+				<clipPath id='clipPath'>
+					<ellipse
+						id='Ellipse_13'
+						data-name='Ellipse 13'
+						cx='49.5'
+						cy='49'
+						rx='49.5'
+						ry='49'
+						transform='translate(0 -0.359)'
+						fill='rgba(0,0,0,0.26)'
+					/>
+				</clipPath>
+			</defs>
+			<g id='Group_389' data-name='Group 389' transform='translate(4607 7017.595)'>
+				<g id='Mask_Group_13' data-name='Mask Group 13' transform='translate(-4607 -7005.641)' clipPath='url(#clipPath)'>
+					<rect
+						id='Rectangle_213'
+						data-name='Rectangle 213'
+						width='131'
+						height='111'
+						transform='translate(-22 -3.359)'
+						fill='rgba(223,223,223,0.44)'
+					/>
+					<path
+						id='Union_3'
+						data-name='Union 3'
+						d='M-194.434,5894.789c-14.282-14.735,12.82-11.4,10.97-16.139l-.1-.153c-9.157-.595-16.435-9.987-16.435-21.487,0-11.882,7.772-21.515,17.358-21.515,5.417,0,14.479,5.011,18.979,10.453-15.974,5.395,4.138,8.532-1.619,11.063-6.194,2.725-15.878.74-17.359,5.228-8.472-.707-3.367,6.783-.547,11.845a13.3,13.3,0,0,1,4.315,3.729c4.96,1.261,5.558,5.469,8.2,8.122,4.343,1.14-2.574,10.01-2.574,14.829-5.951,7.9-10.7,3.511-12.545,13.688-.353,1.942-.886,2.769-1.518,2.77C-189.99,5917.222-194.434,5902.375-194.434,5894.789Zm63.288-7.018c-.578-1.227-3.319-.563-6.626.1-3.473.7-7.574,1.395-10.454-.1-4.413-2.354-7.13-15.417-3.656-16.149.448-2.061,3.244-6.452,7.039-7.39,4.135-1.021,7.124-1.862,7.165-3.634.064-2.845-3.14-1.9-6.31-.959-3.072.916-6.111,1.829-6.111-.707-8.958-.4-4.953-2.312-3.9-5.036,4.025.5,4.138-.969,3.841-2.443-.315-1.575-1.1-3.151,1.933-2.308,2.8-1.416,3.314-8.805,6.872-10.621,2.876.059,5.353-1.942,7.66-3.942,2.834-2.457,5.414-4.913,8.164-3.555,10.756,5.311,18.842,26.963,18.842,38.705,0,17.117,9.9,46.544-7.216,46.544C-119.159,5916.277-127.411,5895.7-131.146,5887.771Z'
+						transform='translate(206.439 -5835.339)'
+						fill='rgba(255,255,255,0.47)'
+					/>
+				</g>
+				<g id='Group_351' data-name='Group 351' transform='translate(-4581.736 -7017.595)'>
+					<g id='Group_350' data-name='Group 350' transform='translate(0)'>
+						<path
+							id='Path_82'
+							data-name='Path 82'
+							d='M-18.928,0H4.393L-5.133,13.625l1.256,61.538h-6.654l2.175-61.538Z'
+							transform='translate(18.928 42.484)'
+							fill={foreground}
+						/>
+						<path id='Path_79' data-name='Path 79' d='M3.73,4.061,5.207,2.373,7.285,0V42.484H3.73Z' transform='translate(-3.73)' fill={foreground} />
+						<path id='Path_80' data-name='Path 80' d='M6.928,4.061,5.6,2.373,3.73,0V42.484h3.2Z' transform='translate(16.392)' fill={foreground} />
+						<path id='Path_81' data-name='Path 81' d='M0-4.9H3.949V37.587H0Z' transform='translate(9.929 5.433)' fill={foreground} />
+					</g>
+					<g id='Group_349' data-name='Group 349' transform='translate(28.93 12.882)'>
+						<path id='Path_83' data-name='Path 83' d='M0,0H5.353L2.161,91.529H0Z' fill={foreground} />
+						<path id='Path_84' data-name='Path 84' d='M0,0H5.353L2.161,91.529H0Z' transform='translate(18.693 9.33) rotate(10)' fill={foreground} />
+					</g>
+				</g>
+			</g>
+		</svg>
+	)
+}
+
+Logo.defaultProps = {
+	foreground: theme.global.colors.brand.light,
+}
+
+Logo.propTypes = {
+	foreground: PropTypes.string,
+}
+
+export default Logo

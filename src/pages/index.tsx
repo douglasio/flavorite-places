@@ -2,12 +2,11 @@
 import * as React from 'react'
 
 //Components
-import { Header, Layout } from 'components'
+import { Layout } from 'components'
 
 const IndexPage = () => {
 	return (
 		<Layout>
-			<Header />
 			<p>hello worlt</p>
 		</Layout>
 	)
