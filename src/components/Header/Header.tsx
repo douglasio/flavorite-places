@@ -2,8 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { menuItemsPropTypes } from 'utils/propTypes'
-import { Link } from 'gatsby'
-import { Anchor, Box, Header as GrommetHeader, Heading, Menu, ResponsiveContext } from 'grommet'
+import { Box, Header as GrommetHeader, Menu, Nav, ResponsiveContext } from 'grommet'
 
 //Components
 import * as Styled from './Header.styles'
@@ -25,31 +24,36 @@ const Header = ({ siteTitle, menuItems }: LayoutProps) => {
 	// const size = React.useContext(ResponsiveContext)
 
 	return (
-		<GrommetHeader background='background' justify='between'>
-			<Heading>
-				<Box justify='start'>
-					<Styled.GrommetAnchor icon={<Logo />} href='/' label={siteTitle} size='large' />
-				</Box>
-			</Heading>
-			<ResponsiveContext.Consumer>
-				{(size) =>
-					size === 'small' ? (
-						<Box justify='end'>
+		<GrommetHeader justify='between'>
+			<Box direction='row' align='center' gap='medium' pad={{ vertical: 'small', horizontal: 'large' }}>
+				<Styled.Lockup
+					title={siteTitle}
+					color='brand'
+					icon={<Logo foreground='#bb72ff' />}
+					href={'/'}
+					label={
+						<>
+							<span className='accent'>flavor</span>ite places
+						</>
+					}
+					size='large'
+				></Styled.Lockup>
+			</Box>
+			<Box direction='row' align='center' gap='medium' pad={{ vertical: 'small', horizontal: 'large' }}>
+				<ResponsiveContext.Consumer>
+					{(size) =>
+						size === 'small' ? (
 							<Menu a11yTitle='Navigation menu' dropProps={{ align: { top: 'bottom', right: 'right' } }} items={menuItems}></Menu>
-						</Box>
-					) : (
-						<Box justify='end' direction='row'>
-							{menuItems.map((menuItem: MenuItemTypes, i) => {
-								return (
-									<Box pad='small'>
-										<Styled.GrommetAnchor key={`${menuItem.label}${i}`} {...menuItem} size='large' />
-									</Box>
-								)
-							})}
-						</Box>
-					)
-				}
-			</ResponsiveContext.Consumer>
+						) : (
+							<Nav direction='row' gap='medium' pad={{ vertical: 'small', horizontal: 'large' }}>
+								{menuItems.map((menuItem: MenuItemTypes, i) => {
+									return <Styled.NavLink key={`${menuItem.label}${i}`} {...menuItem} size='medium' />
+								})}
+							</Nav>
+						)
+					}
+				</ResponsiveContext.Consumer>
+			</Box>
 		</GrommetHeader>
 	)
 }

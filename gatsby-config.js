@@ -74,7 +74,7 @@ module.exports = {
 				// https://css-tricks.com/meta-theme-color-and-trickery/
 				// theme_color: `#663399`,
 				display: `minimal-ui`,
-				icon: `public/static/favicon.ico`, // This path is relative to the root of the site.
+				icon: `public/static/globe-fork-hashi.svg`, // This path is relative to the root of the site.
 			},
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
@@ -88,6 +88,9 @@ module.exports = {
 				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 				// accessToken: `P8LfgzM7FSBE1X43ZvKseeJnWdGvbaHaMKOI26vB4bY`,
 			},
+		},
+		{
+			resolve: 'gatsby-plugin-web-font-loader',
 		},
 	],
 }

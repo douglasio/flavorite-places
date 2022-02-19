@@ -2,14 +2,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Grommet, Main } from 'grommet'
+import { Grommet, Main, grommet } from 'grommet'
 
 //Components
 import { Header } from 'components'
 
 //Styles
 import './layout.css'
-import theme from 'styles/theme'
+// import theme from 'styles/theme'
 
 type LayoutProps = {
 	children: any
@@ -37,7 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
 	`)
 
 	return (
-		<Grommet theme={theme}>
+		<Grommet theme={grommet}>
 			<Header menuItems={siteMetadata.menuLinks.concat(siteMetadata.socialLinks)} siteTitle={siteMetadata.title} />
 			<Main>{children}</Main>
 		</Grommet>

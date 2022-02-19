@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from 'styles/theme'
+// import theme from 'styles/theme'
 
 type LogoProps = {
 	foreground: string
@@ -66,7 +66,7 @@ const Logo = ({ foreground }: LogoProps) => {
 }
 
 Logo.defaultProps = {
-	foreground: theme.global.colors.brand.light,
+	foreground: '#fff',
 }
 
 Logo.propTypes = {

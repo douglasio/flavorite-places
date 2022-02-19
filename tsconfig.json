@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"baseUrl": "./src",
+		"baseUrl": ".",
 		"module": "commonjs",
 		"target": "es6",
 		"jsx": "preserve",
@@ -12,7 +12,15 @@
 		"skipLibCheck": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"removeComments": false
+		"removeComments": false,
+		"paths": {
+			"components": ["./src/components"],
+			"components/*": ["./src/components/*"],
+			"gatsby-config": ["./gatsby-config.js"],
+			"styles/*": ["./src/styles/*"],
+			"svg/*": ["./src/svg/*"],
+			"utils/*": ["./src/utils/*"]
+		}
 	},
 	"include": ["./src"]
 }
