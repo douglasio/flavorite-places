@@ -17,6 +17,8 @@
 			"components": ["./src/components"],
 			"components/*": ["./src/components/*"],
 			"gatsby-config": ["./gatsby-config.js"],
+			"images/*": ["./src/images/*"],
+			"public/*": ["./public/*"],
 			"styles/*": ["./src/styles/*"],
 			"svg/*": ["./src/svg/*"],
 			"utils/*": ["./src/utils/*"]
